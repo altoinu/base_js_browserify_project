@@ -1,0 +1,19 @@
+{
+  "name": "name_here",
+  "description": "description here",
+  "main": "src/index.js",
+  "authors": [
+    "Kaoru Kawashima"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/lib",
+    "test",
+    "tests"
+  ]
+}

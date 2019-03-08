@@ -1,0 +1,36 @@
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+._*
+
+# Editors
+*~
+*.swp
+*.tmproj
+*.tmproject
+*.sublime-*
+.idea
+.idea/
+/.project
+.project/
+.settings/
+.vscode/
+.sass-cache
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+bower_components/
+node_modules/
+src/lib
+
+# Yeoman meta-data
+.yo-rc.json
+
+# compiled output
+dist/
