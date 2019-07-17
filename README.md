@@ -3,7 +3,12 @@ Initial set up
 - bower install (or npm run bower install)
 
 run this to compile js
-- npm run build -> dist/[output file].js, dist/[output file].min.js
+- npm run build<br/>
+outputs to dist/[output file].js, dist/[output file].min.js
+
+run this to compile jsdoc
+- npm run jsdoc<br/>
+outpus to dist/jsdoc/
 
 TODO: ?
 package.json- build:js:collapse
