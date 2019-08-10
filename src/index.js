@@ -1,9 +1,25 @@
 /**
+ * Sample module with class
+ * @module SampleModule
+ * @version 0.0.0 2019/08/10
+ * @requires something
+ */
+
+/**
  * Sample class
  * @class
  * @classdesc Sample class description here
+ * 
  * @param {string} text
  * @param {string} [text2]
+ * 
+ * @property {string} data='hello' description for data
+ * @property {string} text this description
+ * @property {string} [text2='good bye'] next description
+ * 
+ * @example
+ * var MainClass = require('index.js');
+ * new MainClass('text to', 'set');
  */
 function MainClass(text, text2) {
 
@@ -17,9 +33,6 @@ function MainClass(text, text2) {
 
 	this.text = text;
 
-	/**
-	 * @default 'good bye'
-	 */
 	this.text2 = text2 ? text2 : 'good bye';
 
 	// --------------------------------------------------------------------------
