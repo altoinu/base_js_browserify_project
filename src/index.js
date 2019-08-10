@@ -3,6 +3,48 @@
  * @module SampleModule
  * @version 0.0.0 2019/08/10
  * @requires something
+ * 
+ * @example
+ * <!--
+ * ReplaceMeWithObjectName - name specified via -s option in package.json script 'build:js:browserify'
+ * -->
+ * 
+ * <!-- available as global object -->
+ * <script src="index.js"></script>
+ * <script>
+ * new ReplaceMeWithObjectName('text to', 'set');
+ * </script>
+ * 
+ * <!-- via require() -->
+ * <script src="index.js"></script>
+ * <script>
+ * var ReplaceMeWithObjectName = require('index.js');
+ * new ReplaceMeWithObjectName('text to', 'set');
+ * </script>
+ * 
+ * <!-- via requirejs -->
+ * <script>
+ * var require = {
+ *    baseUrl: 'js/'
+ * };
+ * </script>
+ * <script src=".../requirejs/2.3.6/require.js"></script>
+ * <script>
+ *    // load core library
+ *    require([
+ *       'config'
+ *    ], function() {
+ *       
+ *       require([
+ *          'ReplaceMeWithObjectName'
+ *       ], function(ReplaceMeWithObjectName) {
+ *          
+ *          new ReplaceMeWithObjectName();
+ *          
+ *       });
+ *       
+ *    });
+ * </script>
  */
 
 /**
@@ -16,10 +58,6 @@
  * @property {string} data='hello' description for data
  * @property {string} text this description
  * @property {string} [text2='good bye'] next description
- * 
- * @example
- * var MainClass = require('index.js');
- * new MainClass('text to', 'set');
  */
 function MainClass(text, text2) {
 
