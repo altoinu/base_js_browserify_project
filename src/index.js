@@ -67,10 +67,24 @@ function MainClass(text, text2) {
 	//
 	// --------------------------------------------------------------------------
 
+	/**
+	 * Some data.
+	 * @type {string}
+	 * @default 'hello'
+	 */
 	this.data = 'hello';
 
+	/**
+	 * Another data.
+	 * @type {Object}
+	 */
 	this.text = text;
 
+	/**
+	 * Yet another data.
+	 * @type {Object}
+	 * @default 'good bye'
+	 */
 	this.text2 = text2 ? text2 : 'good bye';
 
 	// --------------------------------------------------------------------------
