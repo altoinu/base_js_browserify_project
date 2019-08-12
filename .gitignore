@@ -32,5 +32,5 @@ src/lib
 # Yeoman meta-data
 .yo-rc.json
 
-# compiled output
+# compiled output folder
 dist/

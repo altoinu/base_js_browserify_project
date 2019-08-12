@@ -35,8 +35,10 @@ browserify -s ReplaceMeWithObjectName ...
 
 browserify -r ./src/BLAH.js:ReplaceMeWithRequireName ...
 -> enables 'require'
-<script src="js/BLAH.js"></script>
-<script>
+<pre>
+&lt;script src="js/BLAH.js"&gt;&lt;/script&gt;
+&lt;script&gt;
 var moduleObj = require('ReplaceMeWithRequireName');
 console.log('---', moduleObj);
-</script>
+&lt;/script&gt;
+</pre>
