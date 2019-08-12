@@ -15,13 +15,6 @@
  * new ReplaceMeWithObjectName('text to', 'set');
  * </script>
  * 
- * <!-- via require() -->
- * <script src="index.js"></script>
- * <script>
- * var ReplaceMeWithObjectName = require('index.js');
- * new ReplaceMeWithObjectName('text to', 'set');
- * </script>
- * 
  * <!-- via requirejs -->
  * <script>
  * var require = {
@@ -44,6 +37,14 @@
  *       });
  *       
  *    });
+ * </script>
+ * 
+ * @todo bundle.require (browserify -r option)
+ * <!-- via require() -->
+ * <script src="index.js"></script>
+ * <script>
+ * var ReplaceMeWithObjectName = require('index.js');
+ * new ReplaceMeWithObjectName('text to', 'set');
  * </script>
  */
 
