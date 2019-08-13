@@ -3,8 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Test Page</title>
+
+<script src="dist/index.js"></script>
+<!--
+<script src="dist/index.min.js"></script>
+-->
+
 </head>
 <body>
+
+<script>
+	console.log('----', window);
+	console.log('----', ReplaceMeWithObjectName);
+	
+	console.log('hooray, I\'m going to load ReplaceMeWithObjectName here');
+	
+	var awesomeObj = new ReplaceMeWithObjectName('wow', 'yay');
+	
+	awesomeObj.sayHello('John Smith');
+</script>
 
 </body>
 </html>

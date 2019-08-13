@@ -62,6 +62,8 @@
  */
 function MainClass(text, text2) {
 
+	var me = this;
+
 	// --------------------------------------------------------------------------
 	//
 	// public properties
@@ -96,7 +98,7 @@ function MainClass(text, text2) {
 
 	function sayItNow(name) {
 
-		alert(this.data + ' ' + name + '!');
+		alert(me.data + ' ' + name + '!');
 
 	}
 

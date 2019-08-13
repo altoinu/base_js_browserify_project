@@ -15,5 +15,8 @@
     "src/lib",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "requirejs": "^2.3.6"
+  }
 }
