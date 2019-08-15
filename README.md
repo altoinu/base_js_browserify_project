@@ -1,10 +1,16 @@
+## Required stuff
+- Node.js and npm [https://nodejs.org/](https://nodejs.org/)
+- Yarn [https://yarnpkg.com/](https://yarnpkg.com/)
+
 ## Initial set up
 ```
-npm install
+yarn install
 ```
 
 ## run this to compile js and doc
 ```
+yarn run build
+or
 npm run build
 ```
 - outputs to dist/[output file].js, dist/[output file].min.js
