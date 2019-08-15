@@ -9,6 +9,7 @@
     "exportAsWindowObjectName": "ReplaceMeWithObjectName"
   },
   "scripts": {
+    "install": "bower install",
     "bower": "bower",
     "build": "npm-run-all -p build:*",
     "build:js": "npm-run-all build:js:browserify build:js:bannerize build:js:uglify",

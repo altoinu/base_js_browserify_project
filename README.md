@@ -1,7 +1,6 @@
 ## Initial set up
 ```
 npm install
-bower install (or npm run bower install)
 ```
 
 ## run this to compile js and doc
