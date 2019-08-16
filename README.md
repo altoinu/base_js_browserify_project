@@ -2,6 +2,10 @@
 - Node.js and npm [https://nodejs.org/](https://nodejs.org/)
 - Yarn [https://yarnpkg.com/](https://yarnpkg.com/)
 
+### Notes on bower
+[https://bower.io/blog/2017/how-to-migrate-away-from-bower/](https://bower.io/blog/2017/how-to-migrate-away-from-bower/)<br/>
+may want to clean out bower stuff eventually
+
 ## Initial set up
 ```
 yarn install
