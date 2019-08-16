@@ -1,9 +1,0 @@
-{
-	"plugins": [],
-	"source": {
-		"include": [
-			"src"
-		]
-	},
-	"sourceType": "module"
-}
