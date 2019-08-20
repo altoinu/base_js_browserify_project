@@ -3,6 +3,7 @@
  * @module SampleModule
  * @version 0.0.0 2019/08/10
  * @requires something
+ * @see This really cool link {@link https://www.google.com}
  * 
  * @example
  * <!--
