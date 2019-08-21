@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test Page</title>
+
+<!-- Load module specified by browserify-shim -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="../dist/index.js"></script>
+<!--
+<script src="../dist/index.min.js"></script>
+-->
+
+</head>
+<body>
+
+	<script>
+		console.log('----', window);
+		console.log('----', ReplaceMeWithObjectName);
+
+		console.log('hooray, I\'m going to load ReplaceMeWithObjectName here');
+
+		var awesomeObj = new ReplaceMeWithObjectName('wow', 'yay');
+
+		awesomeObj.sayHello('John Smith');
+	</script>
+
+</body>
+</html>
