@@ -110,11 +110,17 @@ function MainClass(text, text2) {
 	// --------------------------------------------------------------------------
 
 	/**
+	 * @callback sayHelloSuccessCallback
+	 * @param {Object} results
+	 */
+	
+	/**
 	 * Alerts message with this.data and specified name.
 	 * @param {string} name Name to alert.
+	 * @param {module:SampleModule~sayHelloSuccessCallback} sayHelloSuccessCallback Function to be called back.
 	 * @returns {string} 'asdf' as example.
 	 */
-	this.sayHello = function(name) {
+	this.sayHello = function(name, sayHelloSuccessCallback) {
 
 		sayItNow(name);
 
