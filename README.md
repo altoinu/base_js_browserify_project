@@ -1,3 +1,6 @@
+## Writing README stuff
+[https://help.github.com/en/articles/basic-writing-and-formatting-syntax](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
+
 ## Required stuff
 - Node.js and npm [https://nodejs.org/](https://nodejs.org/)
 - Yarn [https://yarnpkg.com/](https://yarnpkg.com/)
