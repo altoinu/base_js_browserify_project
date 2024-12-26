@@ -9,7 +9,7 @@
     "build:js": "npm-run-all build:js:browserify build:js:bannerize build:js:uglify",
     "build:js:browserify": "browserify ./src/index.js -s $npm_package_config_exportAsWindowObjectName -g browserify-shim -o dist/$npm_package_config_exportFileName.js",
     "build:js:bannerize": "bannerize dist/$npm_package_config_exportFileName.js --banner=views/banner.ejs",
-    "build:js:uglify": "uglifyjs dist/$npm_package_config_exportFileName.js --support-ie8 --comments -m -c -o dist/$npm_package_config_exportFileName.min.js",
+    "build:js:uglify": "uglifyjs dist/$npm_package_config_exportFileName.js --comments -m -c -o dist/$npm_package_config_exportFileName.min.js",
     "build:js:collapse": "bundle-collapser dist/$npm_package_config_exportFileName.js -o dist/$npm_package_config_exportFileName.collapse.js",
     "testbuildWithCollapse:js": "npm-run-all build:js:browserify build:js:bannerize build:js:collapse testbuildWithCollapse:js:uglify",
     "testbuildWithCollapse:js:uglify": "uglifyjs dist/$npm_package_config_exportFileName.collapse.js --support-ie8 --comments -m -c -o dist/$npm_package_config_exportFileName.min.js",
