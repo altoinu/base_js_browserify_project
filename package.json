@@ -15,7 +15,10 @@
     "testbuildWithCollapse:js:uglify": "uglifyjs dist/$npm_package_config_exportFileName.collapse.js --support-ie8 --comments -m -c -o dist/$npm_package_config_exportFileName.min.js",
     "build:doc": "npm-run-all -p build:doc:*",
     "build:doc:jsdoc": "jsdoc -P package.json -R README.md -c jsdoc.config.js -r -d dist/jsdoc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint src",
+    "prettier": "prettier --write \"**/*.{md,css,js,cjs,mjs}\"",
+    "lint:fix": "npm-run-all prettier eslint"
   },
   "repository": {
     "type": "git",
@@ -28,12 +31,19 @@
   },
   "homepage": "https://github.com/altoinu/base_js_browserify_project#readme",
   "devDependencies": {
+    "@eslint/compat": "^1.2.4",
+    "@eslint/js": "^9.17.0",
     "bannerize": "^1.1.4",
     "browserify": "^17.0.1",
     "browserify-shim": "^3.8.16",
     "bundle-collapser": "^1.4.0",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.14.0",
     "jsdoc": "^4.0.4",
     "npm-run-all": "^4.1.5",
+    "prettier": "3.4.2",
+    "prettier-plugin-sort-imports": "^1.8.6",
     "uglify-js": "^3.19.3"
   },
   "browserify-shim": {

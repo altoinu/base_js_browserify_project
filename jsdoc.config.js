@@ -1,14 +1,10 @@
-'use strict';
+"use strict";
 
 module.exports = {
-	'plugins': [],
-	'source': {
-		'include': [
-			'src'
-		],
-		'exclude': [
-			'src/lib'
-		]
-	},
-	'sourceType': 'module'
+  plugins: [],
+  source: {
+    include: ["src"],
+    exclude: ["src/lib"],
+  },
+  sourceType: "module",
 };
