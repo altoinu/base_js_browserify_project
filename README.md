@@ -5,7 +5,7 @@ Base project for JavaScript module that can be used by embedding into html page 
 [https://help.github.com/en/articles/basic-writing-and-formatting-syntax](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
 
 ## Required stuff
-- Node.js and npm [https://nodejs.org/](https://nodejs.org/)
+- Node.js (v23.5.0) and npm [https://nodejs.org/](https://nodejs.org/)
 
 ### Notes on bower
 [https://bower.io/blog/2017/how-to-migrate-away-from-bower/](https://bower.io/blog/2017/how-to-migrate-away-from-bower/)<br/>
