@@ -4,18 +4,18 @@
  * @version 0.0.0 2019/08/10
  * @requires something
  * @see This really cool link {@link https://www.google.com}
- * 
+ *
  * @example
  * <!--
  * ReplaceMeWithObjectName - name specified via -s option in package.json script 'build:js:browserify'
  * -->
- * 
+ *
  * <!-- available as global object -->
  * <script src="index.js"></script>
  * <script>
  * new ReplaceMeWithObjectName('text to', 'set');
  * </script>
- * 
+ *
  * <!-- via requirejs -->
  * <script>
  * var require = {
@@ -28,18 +28,18 @@
  *    require([
  *       'config'
  *    ], function() {
- *       
+ *
  *       require([
  *          'ReplaceMeWithObjectName'
  *       ], function(ReplaceMeWithObjectName) {
- *          
+ *
  *          new ReplaceMeWithObjectName();
- *          
+ *
  *       });
- *       
+ *
  *    });
  * </script>
- * 
+ *
  * @todo bundle.require (browserify -r option)
  * <!-- via require() -->
  * <script src="index.js"></script>
@@ -53,81 +53,77 @@
  * Sample class
  * @class
  * @classdesc Sample class description here
- * 
+ *
  * @param {string} text
  * @param {string} [text2]
- * 
+ *
  * @property {string} data='hello' description for data
  * @property {string} text this description
  * @property {string} [text2='good bye'] next description
  */
 function MainClass(text, text2) {
+  var me = this;
 
-	var me = this;
+  // --------------------------------------------------------------------------
+  //
+  // public properties
+  //
+  // --------------------------------------------------------------------------
 
-	// --------------------------------------------------------------------------
-	//
-	// public properties
-	//
-	// --------------------------------------------------------------------------
+  /**
+   * Some data.
+   * @type {string}
+   * @default 'hello'
+   */
+  this.data = "hello";
 
-	/**
-	 * Some data.
-	 * @type {string}
-	 * @default 'hello'
-	 */
-	this.data = 'hello';
+  /**
+   * Another data.
+   * @type {Object}
+   */
+  this.text = text;
 
-	/**
-	 * Another data.
-	 * @type {Object}
-	 */
-	this.text = text;
+  /**
+   * Yet another data.
+   * @type {Object}
+   * @default 'good bye'
+   */
+  this.text2 = text2 ? text2 : "good bye";
 
-	/**
-	 * Yet another data.
-	 * @type {Object}
-	 * @default 'good bye'
-	 */
-	this.text2 = text2 ? text2 : 'good bye';
+  // --------------------------------------------------------------------------
+  //
+  // private functions
+  //
+  // --------------------------------------------------------------------------
 
-	// --------------------------------------------------------------------------
-	//
-	// private functions
-	//
-	// --------------------------------------------------------------------------
+  function sayItNow(name) {
+    alert(me.data + " " + name + "!");
+  }
 
-	function sayItNow(name) {
+  // --------------------------------------------------------------------------
+  //
+  // public methods
+  //
+  // --------------------------------------------------------------------------
 
-		alert(me.data + ' ' + name + '!');
+  /**
+   * @callback sayHelloSuccessCallback
+   * @param {Object} results
+   */
 
-	}
+  /**
+   * Alerts message with this.data and specified name.
+   * @param {string} name Name to alert.
+   * @param {module:SampleModule~sayHelloSuccessCallback} sayHelloSuccessCallback Function to be called back.
+   * @returns {string} 'asdf' as example.
+   */
+  this.sayHello = function (name, sayHelloSuccessCallback) {
+    sayItNow(name);
 
-	// --------------------------------------------------------------------------
-	//
-	// public methods
-	//
-	// --------------------------------------------------------------------------
+    if (sayHelloSuccessCallback) sayHelloSuccessCallback();
 
-	/**
-	 * @callback sayHelloSuccessCallback
-	 * @param {Object} results
-	 */
-	
-	/**
-	 * Alerts message with this.data and specified name.
-	 * @param {string} name Name to alert.
-	 * @param {module:SampleModule~sayHelloSuccessCallback} sayHelloSuccessCallback Function to be called back.
-	 * @returns {string} 'asdf' as example.
-	 */
-	this.sayHello = function(name, sayHelloSuccessCallback) {
-
-		sayItNow(name);
-
-		return 'asdf';
-
-	};
-
+    return "asdf";
+  };
 }
 
 module.exports = MainClass;
