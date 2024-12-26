@@ -1,13 +1,9 @@
 {
   "name": "base_js_browserify_project",
   "version": "0.0.0",
-  "private": true,
   "description": "Base project for JavaScript module that can be used by embedding into html page via &lt;script&gt;",
+  "private": true,
   "main": "src/index.js",
-  "config": {
-    "exportFileName": "index",
-    "exportAsWindowObjectName": "ReplaceMeWithObjectName"
-  },
   "scripts": {
     "build": "npm-run-all -p build:*",
     "build:js": "npm-run-all build:js:browserify build:js:bannerize build:js:uglify",
@@ -21,15 +17,16 @@
     "build:doc:jsdoc": "jsdoc -P package.json -R README.md -c jsdoc.config.js -r -d dist/jsdoc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "browserify-shim": {
-    "jquery": "global:$"
-  },
   "repository": {
     "type": "git",
-    "url": "ssh://username@git_server/path"
+    "url": "git+https://github.com/altoinu/base_js_browserify_project.git"
   },
   "author": "Kaoru Kawashima",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/altoinu/base_js_browserify_project/issues"
+  },
+  "homepage": "https://github.com/altoinu/base_js_browserify_project#readme",
   "devDependencies": {
     "bannerize": "^1.1.4",
     "browserify": "^16.5.0",
@@ -38,5 +35,12 @@
     "jsdoc": "^3.6.3",
     "npm-run-all": "^4.1.5",
     "uglify-js": "^3.6.0"
+  },
+  "browserify-shim": {
+    "jquery": "global:$"
+  },
+  "config": {
+    "exportFileName": "index",
+    "exportAsWindowObjectName": "ReplaceMeWithObjectName"
   }
 }
