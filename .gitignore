@@ -1,11 +1,53 @@
-# OS
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/bower_components
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+/dist
+
+# misc, OS files
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 .DS_Store
 ._*
+*.pem
 
-# Editors
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+logs
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# editors
 *~
 *.swp
 *.tmproj
@@ -19,17 +61,6 @@ Desktop.ini
 .vscode/
 .sass-cache
 
-# Logs
-logs
-*.log
-npm-debug.log*
-
-# Dependency directories
-bower_components/
-node_modules/
-
 # Yeoman meta-data
 .yo-rc.json
 
-# compiled output folder
-dist/

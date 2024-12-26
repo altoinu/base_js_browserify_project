@@ -1,19 +1,15 @@
 {
-  "name": "name_here",
+  "name": "base_js_browserify_project",
   "version": "0.0.0",
+  "description": "Base project for JavaScript module that can be used by embedding into html page via &lt;script&gt;",
   "private": true,
-  "description": "description here",
   "main": "src/index.js",
-  "config": {
-    "exportFileName": "index",
-    "exportAsWindowObjectName": "ReplaceMeWithObjectName"
-  },
   "scripts": {
     "build": "npm-run-all -p build:*",
     "build:js": "npm-run-all build:js:browserify build:js:bannerize build:js:uglify",
     "build:js:browserify": "browserify ./src/index.js -s $npm_package_config_exportAsWindowObjectName -g browserify-shim -o dist/$npm_package_config_exportFileName.js",
     "build:js:bannerize": "bannerize dist/$npm_package_config_exportFileName.js --banner=views/banner.ejs",
-    "build:js:uglify": "uglifyjs dist/$npm_package_config_exportFileName.js --support-ie8 --comments -m -c -o dist/$npm_package_config_exportFileName.min.js",
+    "build:js:uglify": "uglifyjs dist/$npm_package_config_exportFileName.js --comments -m -c -o dist/$npm_package_config_exportFileName.min.js",
     "build:js:collapse": "bundle-collapser dist/$npm_package_config_exportFileName.js -o dist/$npm_package_config_exportFileName.collapse.js",
     "testbuildWithCollapse:js": "npm-run-all build:js:browserify build:js:bannerize build:js:collapse testbuildWithCollapse:js:uglify",
     "testbuildWithCollapse:js:uglify": "uglifyjs dist/$npm_package_config_exportFileName.collapse.js --support-ie8 --comments -m -c -o dist/$npm_package_config_exportFileName.min.js",
@@ -21,22 +17,30 @@
     "build:doc:jsdoc": "jsdoc -P package.json -R README.md -c jsdoc.config.js -r -d dist/jsdoc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "browserify-shim": {
-    "jquery": "global:$"
-  },
   "repository": {
     "type": "git",
-    "url": "ssh://username@git_server/path"
+    "url": "git+https://github.com/altoinu/base_js_browserify_project.git"
   },
   "author": "Kaoru Kawashima",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/altoinu/base_js_browserify_project/issues"
+  },
+  "homepage": "https://github.com/altoinu/base_js_browserify_project#readme",
   "devDependencies": {
     "bannerize": "^1.1.4",
-    "browserify": "^16.5.0",
-    "browserify-shim": "^3.8.14",
-    "bundle-collapser": "^1.3.0",
-    "jsdoc": "^3.6.3",
+    "browserify": "^17.0.1",
+    "browserify-shim": "^3.8.16",
+    "bundle-collapser": "^1.4.0",
+    "jsdoc": "^4.0.4",
     "npm-run-all": "^4.1.5",
-    "uglify-js": "^3.6.0"
+    "uglify-js": "^3.19.3"
+  },
+  "browserify-shim": {
+    "jquery": "global:$"
+  },
+  "config": {
+    "exportFileName": "index",
+    "exportAsWindowObjectName": "ReplaceMeWithObjectName"
   }
 }
