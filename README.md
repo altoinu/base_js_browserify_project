@@ -1,3 +1,6 @@
+# base_js_browserify_project
+Base project for JavaScript module that can be used by embedding into html page via <code>&lt;script&gt;</code>
+
 ## Writing README stuff
 [https://help.github.com/en/articles/basic-writing-and-formatting-syntax](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
 
@@ -17,7 +20,7 @@ npm install
 ```
 npm run build
 ```
-- outputs to dist/[output file].js, dist/[output file].min.js
+- outputs to dist/\[output file\].js, dist/\[output file\].min.js
 - outputs documentation to dist/jsdoc
 
 ## run this to compile only jsdoc
@@ -40,7 +43,7 @@ npm run build:doc:jsdoc
 
 ## TODO: ?
 - package.json- build:js:collapse
-    - This breaks browserify . -s [output object] so it won't be available on window object
+    - This breaks browserify . -s \[output object\] so it won't be available on window object
 
 ## Some random notes
 [https://help.github.com/en/articles/basic-writing-and-formatting-syntax](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
