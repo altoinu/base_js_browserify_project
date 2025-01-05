@@ -17,11 +17,11 @@
 # next.js
 /.next/
 /out/
-/docs
 
 # production
 /build
 /dist
+/docs
 
 # misc, OS files
 Thumbs.db
@@ -64,4 +64,3 @@ next-env.d.ts
 
 # Yeoman meta-data
 .yo-rc.json
-
